@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FullTimeEmployee">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="696.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="88.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="76.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                           <image>
+                              <Image url="@../img/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Illinois Institute of Technology, Chicago " textAlignment="CENTER" wrappingWidth="356.13671875" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="-30.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane>
+               <children>
+                  <HBox alignment="CENTER" layoutY="-8.0" prefHeight="25.0" prefWidth="700.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright " wrappingWidth="78.322265625">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="28.0" layoutY="14.0" prefHeight="379.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="685.0" minWidth="10.0" prefWidth="243.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="685.0" minWidth="10.0" prefWidth="357.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="685.0" minWidth="10.0" prefWidth="125.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="685.0" minWidth="10.0" prefWidth="33.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Good Morning!" wrappingWidth="198.13671875" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="-30.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="loginName" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="341.13671875" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets top="30.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login Time" textAlignment="CENTER" wrappingWidth="230.13671875" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="loginTime" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="233.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <GridPane.margin>
+                              <Insets left="-10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

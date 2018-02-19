@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Reports">
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Illinois Institute of Technology, Chicago " textAlignment="CENTER" wrappingWidth="356.13671875" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="-30.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright  ©  Ramanuja Sreenidhi" wrappingWidth="190.322265625">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.18" prefHeight="160.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <ListView fx:id="listView1" onMouseClicked="#getPayslip" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="reportsTable" maxWidth="800.0" prefHeight="373.0" prefWidth="569.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="EmployeeIdColoumn" editable="false" maxWidth="150.0" prefWidth="45.0" text="EmpId" />
+                              <TableColumn fx:id="basicSalaryColoumn" maxWidth="200.0" prefWidth="70.0" text="Base Salary" />
+                              <TableColumn fx:id="startDateColoumn" maxWidth="200.0" prefWidth="70.0" text="Start Date" />
+                              <TableColumn fx:id="endDateColoumn" maxWidth="200.0" prefWidth="70.0" text="End Date" />
+                              <TableColumn fx:id="generatedDateColoumn" maxWidth="250.0" prefWidth="76.0" text="PaySlip Date" />
+                              <TableColumn fx:id="taColoumn" maxWidth="150.0" prefWidth="50.0" text="TA" />
+                              <TableColumn fx:id="daColoumn" maxWidth="150.0" prefWidth="50.0" text="DA" />
+                              <TableColumn fx:id="taxColoumn" maxWidth="150.0" prefWidth="50.0" text="Tax%" />
+                              <TableColumn fx:id="netSalaryColoumn" maxWidth="250.0" prefWidth="90.0" text="Net Salary" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#back" text="Cancel / Back" HBox.hgrow="NEVER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

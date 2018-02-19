@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin">
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Illinois Institute of Technology, Chicago " textAlignment="CENTER" wrappingWidth="356.13671875" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="-30.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright " wrappingWidth="78.322265625">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="200.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints maxWidth="400.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="200.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="66.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="40.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="338.0" minHeight="10.0" prefHeight="147.0" valignment="BASELINE" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Set Password" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="3" />
+                  <TextField fx:id="username" promptText="username" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="password" promptText="password" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="dateofbirth" maxWidth="400.0" promptText="MM/DD/YYYY" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="phone" onKeyReleased="#phoneNumberValidate" promptText="10 digit mobile number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="4" />
+                  <TextField fx:id="email" promptText="email" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Employment Type" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Designation" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="role" onKeyReleased="#roleValidate" promptText="role" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Project" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ChoiceBox fx:id="employeetype" maxWidth="400.0" prefHeight="25.0" prefWidth="200.0" value="Permanent" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  		<items>
+                  			<FXCollections fx:factory="observableArrayList">
+                  				<String fx:value="Permanent" />
+                  				<String fx:value="Contract" />
+                  			</FXCollections>
+                  		</items>
+                  </ChoiceBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Manager" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="manager" onKeyReleased="#managerValidate" promptText="project manager" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Salary" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <TextField fx:id="salary" promptText="monthly pay scale" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addUserToDB" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="120.0" top="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name" textAlignment="RIGHT" wrappingWidth="100.443359375" />
+                  <TextField fx:id="fullname" onKeyReleased="#fullnameValidate" promptText="fullname" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="project" maxWidth="400.0" prefHeight="25.0" prefWidth="200.0" value="Bharatavani" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Bharatavani" />
+                           <String fx:value="SPPEL" />
+                           <String fx:value="NTM" />
+                           <String fx:value="LDCIL" />
+                           <String fx:value="NTS" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Type" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" />
+                  <ChoiceBox fx:id="usertype" maxWidth="400.0" prefHeight="25.0" prefWidth="200.0" value="User" GridPane.columnIndex="3">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Admin" />
+                           <String fx:value="User" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <TextField fx:id="employeeid" disable="true" editable="false" opacity="0.0" GridPane.rowIndex="6" />
+                  <Button mnemonicParsing="false" onAction="#back" text="Cancel / Back" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <Text fx:id="loginName" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="215.13671875" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
